@@ -1,0 +1,47 @@
+model_name: "Logistic_Regression_v.1.0"
+model_id: 1
+categorical_features:
+- Home
+- Away
+hiperparameters:
+  C: 0.5
+  fit_intercept: True
+  multi_class: auto
+  max_iter: 50
+  tol: 1
+  solver: newton-cg
+numerical_features:
+- season
+- Wk
+- ht_win
+- ht_draw
+- ht_lose
+- ht_goals_for
+- ht_goals_against
+- ht_home_win
+- ht_home_draw
+- ht_home_lose
+- ht_home_goals_for
+- ht_home_goals_against
+- ht_points
+- ht_position
+- ht_goal_diff
+- at_win
+- at_draw
+- at_lose
+- at_goals_for
+- at_goals_against
+- at_home_win
+- at_home_draw
+- at_home_lose
+- at_home_goals_for
+- at_home_goals_against
+- at_points
+- at_position
+- at_goal_diff
+- ht_last_5_games_home
+- ht_last_5_games_away
+- ht_last_5_games
+- at_last_5_games_home
+- at_last_5_games_away
+- at_last_5_games

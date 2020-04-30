@@ -55,6 +55,7 @@ if __name__ == '__main__':
 
     pipe = feature_add_pipeline()
     x = pipe.fit_transform(x)
+    x.fillna(0, inplace=True)
     logging.info('Features added')
 
     save_data(x, name)

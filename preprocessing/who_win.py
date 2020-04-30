@@ -16,42 +16,60 @@ class create_winner(BaseEstimator, TransformerMixin):
 
         df = X.copy()
         def who_win(score):
-            score = score.split('–')
-            goals_home = score[0]
-            goals_away = score[1]
 
-            if goals_home > goals_away:
-                result = 1
+            try:
+                score = score.split('–')
+                goals_home = score[0]
+                goals_away = score[1]
 
-                home_win = 1
-                home_draw = 0
-                home_lose = 0
+                if goals_home > goals_away:
+                    result = 1
 
-                away_win = 0
-                away_draw = 0
-                away_lose = 1
+                    home_win = 1
+                    home_draw = 0
+                    home_lose = 0
 
-            elif goals_home < goals_away:
-                result = -1
+                    away_win = 0
+                    away_draw = 0
+                    away_lose = 1
 
-                home_win = 0
-                home_draw = 0
-                home_lose = 1
+                elif goals_home < goals_away:
+                    result = -1
 
-                away_win = 1
-                away_draw = 0
-                away_lose = 0
+                    home_win = 0
+                    home_draw = 0
+                    home_lose = 1
 
-            else:
-                result = 0
+                    away_win = 1
+                    away_draw = 0
+                    away_lose = 0
 
-                home_win = 0
-                home_draw = 1
-                home_lose = 0
+                else:
+                    result = 0
 
-                away_win = 0
-                away_draw = 1
-                away_lose = 0
+                    home_win = 0
+                    home_draw = 1
+                    home_lose = 0
+
+                    away_win = 0
+                    away_draw = 1
+                    away_lose = 0
+
+
+
+            except:
+                result = 99
+
+                home_win = 99
+                home_draw = 99
+                home_lose = 99
+
+                away_win = 99
+                away_draw = 99
+                away_lose = 99
+
+                goals_away = 99
+                goals_home = 99
 
             return home_win, home_draw, home_lose, goals_home, away_win, away_draw, away_lose, goals_away, result
 
