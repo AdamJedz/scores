@@ -32,7 +32,6 @@ def load_data(year_since, year_to):
 
     all_seasons.drop(columns=['Day', 'Date', 'Time', 'xG', 'xG.1', 'Attendance', 'Venue', 'Referee', 'Match Report', 'Notes'], inplace=True)
     newest_week = all_seasons[all_seasons['Score'].isna()]['Wk'].min()
-    print(newest_week)
     all_seasons = all_seasons[(~all_seasons['Score'].isna()) | (all_seasons['Wk'] == newest_week)]
     all_seasons.sort_values(['season', 'Wk'], inplace=True)
     all_seasons.reset_index(drop=True, inplace=True)
