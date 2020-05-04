@@ -1,0 +1,7 @@
+Flask
+pandas
+numPy
+scikit-learn
+pyaml
+joblib
+lxml

@@ -38,10 +38,11 @@ def get_predictions(data, yaml):
     return y
 
 def save_data(data, y):
-    data = data[['Home', 'Away']]
+    data = data[['season', 'Wk','Home', 'Away']]
+    data.reset_index(drop=True, inplace=True)
     data['result'] = y
 
-    today = date.today().strftime('%d%m%y')
+    today = date.today().strftime('%y%m%d')
     data.to_csv(f'./predictions/preds_{today}.csv')
     return data
 
