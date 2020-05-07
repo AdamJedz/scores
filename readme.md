@@ -1,7 +1,7 @@
 # Premier League Scores prediction  
   
   
-Based on data from https://fbref.com/en/comps/9/schedule/Premier-League-Fixtures I created model that predicts outcome of football game. Model is built on logistic regression with tuned hyperparameters.  
+Based on data from https://fbref.com I created model that predicts outcome of football game. Model is built on logistic regression with tuned hyperparameters.  
   
 
 ## Structure  
