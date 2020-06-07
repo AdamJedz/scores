@@ -26,4 +26,7 @@ For every game there are 3 possible outcomes:
 * -1 - away team wins,  
 * 0 - draw.  
 
-Predictions are made for soonest game week (or if week is in progress predictions ae only for games that are left in current game week).  
+Predictions are made for soonest game week (or if week is in progress predictions ae only for games that are left in current game week). 
+
+# Web app
+Application is avalaible on https://adamiecscores.azurewebsites.net/
